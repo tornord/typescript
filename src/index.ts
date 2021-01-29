@@ -1,9 +1,7 @@
-import axios from "axios";
+import { getUser } from "./githubApi";
 
 async function main() {
-  const user = "tornord";
-  const url = `https://api.github.com/users/${user}`;
-  const { data } = await axios.get(url);
+  const data = await getUser("tornord");
   console.log(data);
 }
 
